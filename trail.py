@@ -15,7 +15,7 @@ while True:
 
     #This is the minecraft block ID of the flower block.
     #To see what other block IDs are available, go here in your browser: http://minecraft-ids.grahamedgecombe.com/
-    block = 46
+    block = 38
 
     #Set the block at the x/y/z coordinates of the current player to the block id we chose above.
     mc.setBlock(pos.x, pos.y, pos.z, block)
