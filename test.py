@@ -9,12 +9,8 @@ import time
 
 """
 
-server_address = "158.69.221.37"
-my_player_name = "bob"
-
-mc = minecraft.Minecraft.create(name=my_player_name)
-
-my_id = mc.getPlayerEntityId(my_player_name)
+# Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
 
 def tnt_trap(pos):
     mc.setBlock(pos.x, pos.y-1, pos.z, 46)
