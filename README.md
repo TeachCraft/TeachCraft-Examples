@@ -8,7 +8,7 @@
 
 
 
-## MCPI api (TeachCraft version)
+## MCPI library (TeachCraft version)
 
 Click a function name to see an example.
 
@@ -521,5 +521,14 @@ print rotation
 </details>
 
 
+## minecraftstuff library [From Martin O'Hanlon, <a href='https://github.com/martinohanlon/minecraft-stuff'>repo</a>, <a href='http://www.stuffaboutcode.com/p/minecraft.html'>website</a>, <a href='https://www.amazon.com/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=111894691X&linkCode=as2&tag=teachcraft-20&linkId=62f6ef5032275ace368045b4b7535c8f'>book</a>]
+
+
+
+
+## Block IDs
+
+- <a href='http://minecraft-ids.grahamedgecombe.com/'>Website with lookup table</a>
+- <a href='http://www.stuffaboutcode.com/p/minecraft-api-reference.html'>Using a python library</a> [Scroll down to 'Blocks' section]
 
 https://github.com/martinohanlon/minecraft-stuff
