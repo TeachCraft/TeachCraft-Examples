@@ -523,13 +523,14 @@ print rotation
 
 ## minecraftstuff library [From Martin O'Hanlon, <a href='https://github.com/martinohanlon/minecraft-stuff'>repo</a>, <a href='http://www.stuffaboutcode.com/p/minecraft.html'>website</a>, <a href='https://www.amazon.com/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=111894691X&linkCode=as2&tag=teachcraft-20&linkId=62f6ef5032275ace368045b4b7535c8f'>book</a>]
 
+#### minecraftstuff.MinecraftTurtle
 
 <details>
   <summary>
 turtle = MinecraftTurtle(mc, pos)
   </summary>
 
-> Connect to a minecraft world
+> Create a Minecraft Turtle
 
 ```python
 
@@ -545,55 +546,6 @@ pos = mc.player.getPos()
 
 # create minecraft turtle
 turtle = MinecraftTurtle(mc, pos)
-
-# tests
-# draw a pentagon at different speeds
-turtle.forward(5)
-turtle.right(72)
-turtle.speed(8)
-turtle.forward(5)
-turtle.right(72)
-turtle.speed(10)
-turtle.forward(5)
-turtle.right(72)
-turtle.speed(0)
-turtle.forward(5)
-turtle.right(72)
-turtle.forward(5)
-
-# change pen
-turtle.penblock(block.WOOL.id, 0)
-
-# backward
-turtle.speed(6)
-turtle.backward(10)
-
-# change pen
-turtle.penblock(block.WOOL.id, 1)
-
-# pen up/down
-turtle.penup()
-turtle.forward(20)
-turtle.pendown()
-
-# change pen
-turtle.penblock(block.WOOL.id, 2)
-
-# up, down, left
-turtle.up(30)
-turtle.forward(5)
-turtle.right(72)
-turtle.forward(5)
-turtle.down(30)
-turtle.left(72)
-turtle.forward(5)
-
-# change pen
-turtle.penblock(block.WOOL.id, 3)
-
-# walking
-turtle.walk()
-turtle.forward(10)
 
 ```
 
