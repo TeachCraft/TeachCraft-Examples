@@ -1,11 +1,9 @@
 import mcpi.minecraft as minecraft
 import time
 
-server_address = "199.96.85.3"
-my_player_name = "steve"
-
-# Open a connection to the minecraft server
-mc = minecraft.Minecraft.create(address=server_address, name=my_player_name)
+# Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+# HINT: Replace the IP and username above with your own!
 
 # Repeat every 0.2 seconds...
 while True:
@@ -21,3 +19,7 @@ while True:
     mc.setBlock(pos.x, pos.y, pos.z, block)
 
     time.sleep(0.2)
+
+
+# Checkout the Examples directoy for other examples you can run!
+# In each example, you'll need to update the IP Address and your game name.
