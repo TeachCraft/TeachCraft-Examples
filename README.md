@@ -756,7 +756,7 @@ turtle.home()
 
 <details>
   <summary>
-turtle.speed(5)
+turtle.speed(integer)
   </summary>
 
 > Change the turtles speed (1 - slowest, 10 - fastest, 0 - no animation, it just draws the lines)
