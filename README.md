@@ -10,13 +10,11 @@
 
 ## MCPI api (TeachCraft version)
 
-These are the functions are exposed via this mod. To use these functions, you'll need the Python API, which is available in <a href='https://github.com/TeachCraft/TeachCraft-Examples'>TeachCraft-Examples repository</a>.
-
 Click a function name to see an example.
 
 <details>
   <summary>
-minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
   </summary>
 
 > Connect to a minecraft world
