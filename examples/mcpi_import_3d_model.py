@@ -246,51 +246,69 @@ if __name__ == "__main__":
      DEFAULTBLOCK = the default type of block to build the model in, used if a material cant be found
     """
 
-    # Shuttle
-    COORDSSCALE = 6
-    
-    STARTCOORD = minecraft.Vec3(-60,0,20)
-    CLEARAREA1 = minecraft.Vec3(-30, 5, -30)
-    CLEARAREA2 = minecraft.Vec3(-90, 50, 30)
-    DEFAULTBLOCK = [block.WOOL.id,0]
-    MATERIALS = {"glass": [block.GLASS.id, 0],
-                 "bone": [block.WOOL.id, 0],
-                 "fldkdkgrey": [block.WOOL.id, 7],
-                 "redbrick": [block.WOOL.id, 14],
-                 "black": [block.WOOL.id, 15],
-                 "brass": [block.WOOL.id, 1],
-                 "dkdkgrey": [block.WOOL.id, 7]}
-    SWAPYZ = True
-    vertices,textures,normals,faces,materials = load_obj("resources/shuttle.obj", DEFAULTBLOCK, MATERIALS)
+    what_to_build = "shuttle" #Valid values: shuttle, skyscraper, or farmhouse
 
-    # Skyscraper
-    #COORDSSCALE = 1.4
-    #STARTCOORD = minecraft.Vec3(0,10,15)
-    #CLEARAREA1 = minecraft.Vec3(-30, -3, -15)
-    #CLEARAREA2 = minecraft.Vec3(30, 65, 35)
-    #DEFAULTBLOCK = [block.IRON_BLOCK, 0]
-    #MATERIALS = {}
-    #SWAPYZ = False
-    #vertices,textures,normals,faces,materials = load_obj("resources/skyscraper.obj", DEFAULTBLOCK, MATERIALS)
+    if what_to_build == "shuttle":
+        COORDSSCALE = 6
 
-    # Farmhouse
-    #COORDSSCALE = 1
-    #STARTCOORD = minecraft.Vec3(10,0,15)
-    #CLEARAREA1 = minecraft.Vec3(-30, -3, -15)
-    #CLEARAREA2 = minecraft.Vec3(30, 65, 35)
-    #DEFAULTBLOCK = [block.IRON_BLOCK, 0]
-    #MATERIALS = {}
-    #SWAPYZ = False
-    #vertices,textures,normals,faces,materials = load_obj("resources/farmhouse.obj", DEFAULTBLOCK, MATERIALS)
+        #Build model 20 blocks above player
+        pos = mc.player.getTilePos()
+        STARTCOORD = minecraft.Vec3(pos.x,pos.z,pos.y+20)
+        SWAPYZ = True
+        #Note: Y and Z are swapped in this 3d model compared to the MC universe
+
+        DEFAULTBLOCK = [block.WOOL.id,0]
+        MATERIALS = {"glass": [block.GLASS.id, 0],
+                     "bone": [block.WOOL.id, 0],
+                     "fldkdkgrey": [block.WOOL.id, 7],
+                     "redbrick": [block.WOOL.id, 14],
+                     "black": [block.WOOL.id, 15],
+                     "brass": [block.WOOL.id, 1],
+                     "dkdkgrey": [block.WOOL.id, 7]}
+        vertices,textures,normals,faces,materials = load_obj("resources/shuttle.obj", DEFAULTBLOCK, MATERIALS)
+
+    if what_to_build == "skyscraper":
+        COORDSSCALE = 1.4
+        #Build model 20 blocks to size of player
+        pos = mc.player.getTilePos()
+        STARTCOORD = minecraft.Vec3(pos.x,pos.y,pos.z+20)
+        SWAPYZ = False
+        DEFAULTBLOCK = [block.IRON_BLOCK, 0]
+        MATERIALS = {"glass": [block.GLASS.id, 0],
+                     "bone": [block.WOOL.id, 0],
+                     "fldkdkgrey": [block.WOOL.id, 7],
+                     "redbrick": [block.WOOL.id, 14],
+                     "black": [block.WOOL.id, 15],
+                     "brass": [block.WOOL.id, 1],
+                     "dkdkgrey": [block.WOOL.id, 7]}
+
+        MATERIALS = {
+            "brass": [block.WOOL.id, 1],
+            "bone": [block.WOOL.id, 0],
+            "black": [block.WOOL.id, 15],
+            "bluteal": [block.IRON_BLOCK, 0],
+            "tan": [24, 2],
+            "blutan": [42, 0],
+            "brown": [5, 1],
+            "ltbrown": [5, 3],
+        }
+
+        vertices,textures,normals,faces,materials = load_obj("resources/skyscraper.obj", DEFAULTBLOCK, MATERIALS)
+
+    if what_to_build == "farmhouse":
+        COORDSSCALE = 1
+        #Build model 20 blocks to size of player
+        pos = mc.player.getTilePos()
+        STARTCOORD = minecraft.Vec3(pos.x,pos.y,pos.z+20)
+        DEFAULTBLOCK = [block.IRON_BLOCK, 0]
+        MATERIALS = {}
+        SWAPYZ = False
+        vertices,textures,normals,faces,materials = load_obj("resources/farmhouse.obj", DEFAULTBLOCK, MATERIALS)
 
     print "obj file loaded"
 
     #Post a message to the minecraft chat window
     mc.postToChat("Started 3d render...")
-
-    # clear a suitably large area
-    mc.setBlocks(CLEARAREA1.x, CLEARAREA1.y, CLEARAREA1.z, CLEARAREA2.x, CLEARAREA2.y, CLEARAREA2.z, block.AIR)
-    time.sleep(10)
 
     faceCount = 0
     # loop through faces
@@ -309,7 +327,5 @@ if __name__ == "__main__":
         faceCount = faceCount + 1
 
     mc.postToChat("Model complete.")
-
-    mc.player.setPos(STARTCOORD.x+20, STARTCOORD.y+30, STARTCOORD.z)
 
     print datetime.datetime.now()
