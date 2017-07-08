@@ -2,7 +2,7 @@
 
 ## Examples
 
-Checkout the /examples directory in this repo!
+Checkout the <a href='https://github.com/TeachCraft/TeachCraft-Examples/tree/master/examples'>/examples directory</a> in this repo!
 
 
 ## <a href='https://github.com/TeachCraft/TeachCraft-Examples/tree/master/mcpi'>MCPI</a> library (TeachCraft version)
