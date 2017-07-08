@@ -525,6 +525,8 @@ print rotation
 
 #### minecraftstuff.MinecraftTurtle
 
+- <a href='http://minecraft-stuff.readthedocs.io/en/latest/minecraftturtle.html#id1'>Official Documentation</a>
+
 <details>
   <summary>
 turtle = MinecraftTurtle(mc, pos)
@@ -1202,6 +1204,13 @@ turtle.fly()
 
 </details>
 
+#### minecraftstuff.MinecraftShape
+
+- <a href='http://minecraft-stuff.readthedocs.io/en/latest/minecraftshape.html'>Official Documentation</a>
+
+#### minecraftstuff.MinecraftDrawing
+
+- <a href='http://minecraft-stuff.readthedocs.io/en/latest/minecraftdrawing.html#minecraftdrawing'>Official Documentation</a>
 
 ## Block IDs
 
