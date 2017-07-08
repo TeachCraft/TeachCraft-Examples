@@ -8,7 +8,7 @@
 
 
 
-## MCPI library (TeachCraft version)
+## <a href='https://github.com/TeachCraft/TeachCraft-Examples/tree/master/mcpi'>MCPI</a> library (TeachCraft version)
 
 Click a function name to see an example.
 
@@ -521,7 +521,7 @@ print rotation
 </details>
 
 
-## minecraftstuff library [From Martin O'Hanlon, <a href='https://github.com/martinohanlon/minecraft-stuff'>repo</a>, <a href='http://www.stuffaboutcode.com/p/minecraft.html'>website</a>, <a href='https://www.amazon.com/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=111894691X&linkCode=as2&tag=teachcraft-20&linkId=62f6ef5032275ace368045b4b7535c8f'>book</a>]
+## <a href='https://github.com/TeachCraft/TeachCraft-Examples/tree/master/minecraftstuff'>minecraftstuff</a> library [From Martin O'Hanlon, <a href='https://github.com/martinohanlon/minecraft-stuff'>repo</a>, <a href='http://www.stuffaboutcode.com/p/minecraft.html'>website</a>, <a href='https://www.amazon.com/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=111894691X&linkCode=as2&tag=teachcraft-20&linkId=62f6ef5032275ace368045b4b7535c8f'>book</a>]
 
 #### minecraftstuff.MinecraftTurtle
 
