@@ -1216,5 +1216,3 @@ turtle.fly()
 
 - <a href='http://minecraft-ids.grahamedgecombe.com/'>Website with lookup table</a>
 - <a href='http://www.stuffaboutcode.com/p/minecraft-api-reference.html'>Using a python library</a> [Scroll down to 'Blocks' section]
-
-https://github.com/martinohanlon/minecraft-stuff
