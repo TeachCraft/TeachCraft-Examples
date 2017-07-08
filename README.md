@@ -1142,7 +1142,7 @@ print turtlePos.z
 turtle.setheading(angle)
   </summary>
 
-> set the turtles headings
+> Set the turtles headings
 
 ```python
 
@@ -1171,7 +1171,7 @@ turtle.setheading(90)
 turtle.setverticalheading(angle)
   </summary>
 
-> set the turtles vertical headings
+> Set the turtles vertical headings
 
 ```python
 
@@ -1189,6 +1189,62 @@ pos = mc.player.getPos()
 turtle = MinecraftTurtle(mc, pos)
 
 turtle.setverticalheading(90)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.walk()
+  </summary>
+
+> Force the turtle to walk along the ground
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.walk()
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.fly()
+  </summary>
+
+> Allow the turtle to fly (e.g. not be forced to move along the ground)
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.fly()
 
 ```
 
