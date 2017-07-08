@@ -770,6 +770,430 @@ turtle.down(10)
 
 </details>
 
+<details>
+  <summary>
+turtle.home()
+  </summary>
+
+> Move turtle back to the position it started in
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+turtle.right(10)
+turtle.home()
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.speed(5)
+  </summary>
+
+> Change the turtles speed (1 - slowest, 10 - fastest, 0 - no animation, it just draws the lines)
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.speed(5)
+turtle.down(10)
+turtle.speed(10)
+turtle.right(10)
+turtle.home()
+
+```
+
+</details>
+
+
+<details>
+  <summary>
+turtle.penblock(block_id, [block_data])
+  </summary>
+
+> Change the turtles speed (1 - slowest, 10 - fastest, 0 - no animation, it just draws the lines)
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+grass_block_id = 2
+turtle.penblock(grass_block_id)
+turtle.down(10)
+
+wool_block_id = 35
+wool_block_data = 1 #orange
+
+turtle.penblock(wool_block_id, wool_block_data)
+turtle.right(10)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.penup()
+  </summary>
+
+> Put the pen up (stop drawing when the turtle moves)
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.penup()
+
+turtle.right(10)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.pendown()
+  </summary>
+
+> Put the pen down (start drawing again when the turtle moves after you called turtle.penup())
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.pendown()
+
+turtle.right(10)
+
+turtle.penup()
+
+turtle.up(10)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.isdown()
+  </summary>
+
+> Check if the pen is down, returning a boolean
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.pendown()
+
+turtle.right(10)
+
+if turtle.isdown():
+    print "Pen is down!"
+
+```
+
+</details>
+
+
+<details>
+  <summary>
+turtle.setposition(x, y, z)
+  </summary>
+
+> Reset turtle's position to a given x/y/z coordinate
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.right(10)
+
+# Have turtle reset back to player's position
+turtle.setposition(pos.x, pos.y, pos.z)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.setx(x)
+  </summary>
+
+> Reset turtle's position to a given x coordinate
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.right(10)
+
+# Have turtle reset back to player's x position
+turtle.setx(pos.x)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.sety(y)
+  </summary>
+
+> Reset turtle's position to a given y coordinate
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.right(10)
+
+# Have turtle reset back to player's y position
+turtle.setx(pos.y)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.setz(z)
+  </summary>
+
+> Reset turtle's position to a given z coordinate
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+turtle.right(10)
+
+# Have turtle reset back to player's z position
+turtle.setx(pos.z)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.position
+  </summary>
+
+> Retrieve turtle's current x/y/z position
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtlePos = turtle.position
+print turtlePos.x
+print turtlePos.y
+print turtlePos.z
+
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.setheading(angle)
+  </summary>
+
+> set the turtles headings
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.setheading(90)
+
+```
+
+</details>
+
+
+<details>
+  <summary>
+turtle.setverticalheading(angle)
+  </summary>
+
+> set the turtles vertical headings
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle at player's current position
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.setverticalheading(90)
+
+```
+
+</details>
+
 
 ## Block IDs
 
