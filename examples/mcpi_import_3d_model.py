@@ -2,6 +2,8 @@
 import os.path, sys
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
 
+#Example Source from: https://github.com/martinohanlon/minecraft-renderObjv2
+
 #from minecraftstuff import MinecraftDrawing
 import mcpi.minecraft as minecraft
 import mcpi.block as block
@@ -246,6 +248,7 @@ if __name__ == "__main__":
 
     # Shuttle
     COORDSSCALE = 6
+    
     STARTCOORD = minecraft.Vec3(-60,0,20)
     CLEARAREA1 = minecraft.Vec3(-30, 5, -30)
     CLEARAREA2 = minecraft.Vec3(-90, 50, 30)
