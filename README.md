@@ -216,7 +216,7 @@ print pos.x, pos.y, pos.z
 
 <details>
   <summary>
-mc.player.setPos()
+mc.player.setPos(x, y, z)
   </summary>
 
 > Set current player's position exactly (supports decimals)
@@ -266,7 +266,7 @@ print pos.x, pos.y, pos.z
 
 <details>
   <summary>
-mc.player.setTilePos()
+mc.player.setTilePos(x, y, z)
   </summary>
 
 > Set current player's position rounded to the block (supports integers)
@@ -524,6 +524,251 @@ print rotation
 ## minecraftstuff library [From Martin O'Hanlon, <a href='https://github.com/martinohanlon/minecraft-stuff'>repo</a>, <a href='http://www.stuffaboutcode.com/p/minecraft.html'>website</a>, <a href='https://www.amazon.com/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=111894691X&linkCode=as2&tag=teachcraft-20&linkId=62f6ef5032275ace368045b4b7535c8f'>book</a>]
 
 
+<details>
+  <summary>
+turtle = MinecraftTurtle(mc, pos)
+  </summary>
+
+> Connect to a minecraft world
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+# tests
+# draw a pentagon at different speeds
+turtle.forward(5)
+turtle.right(72)
+turtle.speed(8)
+turtle.forward(5)
+turtle.right(72)
+turtle.speed(10)
+turtle.forward(5)
+turtle.right(72)
+turtle.speed(0)
+turtle.forward(5)
+turtle.right(72)
+turtle.forward(5)
+
+# change pen
+turtle.penblock(block.WOOL.id, 0)
+
+# backward
+turtle.speed(6)
+turtle.backward(10)
+
+# change pen
+turtle.penblock(block.WOOL.id, 1)
+
+# pen up/down
+turtle.penup()
+turtle.forward(20)
+turtle.pendown()
+
+# change pen
+turtle.penblock(block.WOOL.id, 2)
+
+# up, down, left
+turtle.up(30)
+turtle.forward(5)
+turtle.right(72)
+turtle.forward(5)
+turtle.down(30)
+turtle.left(72)
+turtle.forward(5)
+
+# change pen
+turtle.penblock(block.WOOL.id, 3)
+
+# walking
+turtle.walk()
+turtle.forward(10)
+
+```
+
+</details>
+
+
+<details>
+  <summary>
+turtle.forward(distance)
+  </summary>
+
+> Move turtle forward [distance] number of blocks
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+# Move turtle forward 5 blocks
+turtle.forward(5)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.backward(distance)
+  </summary>
+
+> Move turtle backward [distance] number of blocks
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.backward(10)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.right(distance)
+  </summary>
+
+> Move turtle right [distance] number of blocks
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.right(10)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.left(distance)
+  </summary>
+
+> Move turtle left [distance] number of blocks
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.left(10)
+
+```
+
+</details>
+
+
+<details>
+  <summary>
+turtle.up(distance)
+  </summary>
+
+> Move turtle up [distance] number of blocks
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.up(10)
+
+```
+
+</details>
+
+<details>
+  <summary>
+turtle.down(distance)
+  </summary>
+
+> Move turtle down [distance] number of blocks
+
+```python
+
+from mcpi import minecraft
+from minecraftstuff import MinecraftTurtle
+
+#Connect to minecraft server 127.0.0.1 as player 'steve'
+mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
+
+#Get current player's position
+pos = mc.player.getPos()
+
+
+# create minecraft turtle
+turtle = MinecraftTurtle(mc, pos)
+
+turtle.down(10)
+
+```
+
+</details>
 
 
 ## Block IDs
