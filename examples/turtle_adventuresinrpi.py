@@ -1,6 +1,6 @@
 # These two lines are because of the folder the demos are located in, and aren't normally necessary
 import os.path, sys
-sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir, os.pardir))
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
 
 # Minecraft Turtle Example
 # Ported from the scratch turtle project in "Adventures in Raspberry Pi"
@@ -15,9 +15,9 @@ mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
 pos = mc.player.getPos()
 
 # create minecraft turtle
-steve = MinecraftTurtle(mc, pos)
-steve.speed(0)
-steve.setheading(90)
+turtle = MinecraftTurtle(mc, pos)
+turtle.speed(0)
+turtle.setheading(90)
 NumberOfSides = 5
 Angle = 360 / NumberOfSides
 SideLength = 20
@@ -25,12 +25,12 @@ WoolColour = 0
 
 for count in range(24):
     for side in range(NumberOfSides):
-        steve.forward(SideLength)
-        steve.right(Angle)
-    steve.right(15)
+        turtle.forward(SideLength)
+        turtle.right(Angle)
+    turtle.right(15)
     WoolColour += 1
     if WoolColour > 15:
         WoolColour = 0
-    steve.penblock(block.WOOL.id, WoolColour)
+    turtle.penblock(block.WOOL.id, WoolColour)
     # go 3d
-    # steve.sety(steve.position.y + 1)
+    # turtle.sety(turtle.position.y + 1)

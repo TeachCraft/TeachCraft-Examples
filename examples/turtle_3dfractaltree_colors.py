@@ -1,6 +1,6 @@
 # These two lines are because of the folder the demos are located in, and aren't normally necessary
 import os.path, sys
-sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir, os.pardir))
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
 
 # Minecraft Turtle Example
 from minecraftstuff import MinecraftTurtle
@@ -45,13 +45,13 @@ mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
 pos = mc.player.getPos()
 
 # create minecraft turtle
-steve = MinecraftTurtle(mc, pos)
+turtle = MinecraftTurtle(mc, pos)
 
 # point up
-steve.setverticalheading(90)
+turtle.setverticalheading(90)
 
 # set speed
-steve.speed(0)
+turtle.speed(0)
 
 # call the tree fractal
-tree(20, steve)
+tree(20, turtle)
