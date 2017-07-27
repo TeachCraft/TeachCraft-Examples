@@ -1,7 +1,7 @@
 import socket
 import select
 import sys
-from .util import flatten_parameters_to_string, flatten_parameters_to_bytestring
+from .util import flatten_parameters_to_bytestring
 
 """ @author: Aron Nieminen, Mojang AB"""
 
