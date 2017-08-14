@@ -18,7 +18,7 @@ class MinecraftDrawing:
     # draw point
     def drawPoint3d(self, x, y, z, blockType, blockData=None):
         self.mc.setBlock(x,y,z,blockType,blockData)
-        #print "x = " + str(x) + ", y = " + str(y) + ", z = " + str(z)
+        #print("x = " + str(x) + ", y = " + str(y) + ", z = " + str(z))
 
     # draws a face, when passed a collection of vertices which make up a polyhedron
     def drawFace(self, vertices, blockType, blockData=None):
@@ -34,7 +34,7 @@ class MinecraftDrawing:
             if vertexCount > 1:
                 # got 2 vertices, get the points for the edge
                 edgesVertices = edgesVertices + self.getLine(lastVertex.x, lastVertex.y, lastVertex.z, vertex.x, vertex.y, vertex.z)
-                #print "x = " + str(lastVertex.x) + ", y = " + str(lastVertex.y) + ", z = " + str(lastVertex.z) + " x2 = " + str(vertex.x) + ", y2 = " + str(vertex.y) + ", z2 = " + str(vertex.z)
+                #print("x = " + str(lastVertex.x) + ", y = " + str(lastVertex.y) + ", z = " + str(lastVertex.z) + " x2 = " + str(vertex.x) + ", y2 = " + str(vertex.y) + ", z2 = " + str(vertex.z))
             # persist the last vertex found
             lastVertex = vertex
         # get edge between the last and first vertices
@@ -54,7 +54,7 @@ class MinecraftDrawing:
             # got 2 vertices, draw lines between them
             if (vertexCount > 1):
                 self.drawLine(lastVertex.x, lastVertex.y, lastVertex.z, vertex.x, vertex.y, vertex.z, blockType, blockData)
-                #print "x = " + str(lastVertex.x) + ", y = " + str(lastVertex.y) + ", z = " + str(lastVertex.z) + " x2 = " + str(vertex.x) + ", y2 = " + str(vertex.y) + ", z2 = " + str(vertex.z)
+                #print("x = " + str(lastVertex.x) + ", y = " + str(lastVertex.y) + ", z = " + str(lastVertex.z) + " x2 = " + str(vertex.x) + ", y2 = " + str(vertex.y) + ", z2 = " + str(vertex.z))
             # persist the last vertex found
             lastVertex = vertex
 
@@ -203,7 +203,7 @@ def load_obj(filename, defaultBlock, materials) :
                 currentMaterial = materials[usemtl]
             else:
                 currentMaterial = defaultBlock
-                print "Warning: Couldn't find '" + str(usemtl) + "' in materials using default"
+                print("Warning: Couldn't find '" + str(usemtl) + "' in materials using default")
 
     return V, T, N, F, MF
 
@@ -227,7 +227,7 @@ def getVertexXYZ(vertexLine, scale, startCoord, swapYZ):
 # main program
 if __name__ == "__main__":
 
-    print datetime.datetime.now()
+    print(datetime.datetime.now())
 
     # Connect to minecraft server 127.0.0.1 as player 'steve'
     mc = minecraft.Minecraft.create(address="127.0.0.1", name="steve")
@@ -305,7 +305,7 @@ if __name__ == "__main__":
         SWAPYZ = False
         vertices,textures,normals,faces,materials = load_obj("resources/farmhouse.obj", DEFAULTBLOCK, MATERIALS)
 
-    print "obj file loaded"
+    print("obj file loaded")
 
     #Post a message to the minecraft chat window
     mc.postToChat("Started 3d render...")
@@ -328,4 +328,4 @@ if __name__ == "__main__":
 
     mc.postToChat("Model complete.")
 
-    print datetime.datetime.now()
+    print(datetime.datetime.now())
